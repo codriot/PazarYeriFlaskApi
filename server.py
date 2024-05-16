@@ -1,17 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#       _                              
-#      | |                             
-#    __| |_ __ ___  __ _ _ __ ___  ___ 
-#   / _` | '__/ _ \/ _` | '_ ` _ \/ __|
-#  | (_| | | |  __/ (_| | | | | | \__ \
-#   \__,_|_|  \___|\__,_|_| |_| |_|___/ .
-#
-# A 'Fog Creek'–inspired demo by Kenneth Reitz™
-
 import os
 from flask import Flask, request, render_template, jsonify
+import json
 
 # Support for gomix's 'front-end' and 'back-end' UI.
 app = Flask(__name__, static_folder='public', template_folder='views')
@@ -34,6 +26,39 @@ def apply_kr_hello(response):
     # Powered by Flask. 
     response.headers["X-Powered-By"] = os.environ.get('POWERED_BY')
     return response
+
+  
+  
+@app.route('/data', methods=['POST'])
+def add_data():
+    # POST isteğinden gelen JSON verisini al
+    data = request.get_json()
+
+    # JSON dosyasını oku
+    with open('views/data.json', 'r') as f:
+        json_data = json.load(f)
+
+    # Yeni veriyi JSON dosyasına ekle
+    json_data[data['name']] = data['value']
+
+    # Güncellenmiş JSON verisini dosyaya yaz
+    with open('views/data.json', 'w') as f:
+        json.dump(json_data, f)
+
+    # Başarılı yanıt gönder
+    return jsonify({'message': 'Veri başarıyla eklendi!'}), 200
+
+  
+  
+@app.route('/data', methods=['GET'])
+def get_data():
+    try:
+        with open('views/data.json', 'r') as f:
+            json_data = json.load(f)
+    except FileNotFoundError:
+        return jsonify({'message': 'Veri bulunamadı'}), 404
+
+    return jsonify(json_data), 200
 
 
 @app.route('/')
