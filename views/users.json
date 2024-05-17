@@ -8,14 +8,36 @@
                 {
                     "product": "pro"
                 }, 
-                "new product"
+                {
+                    "image": "img2", 
+                    "description": "Bu urun B'nin aciklamasidir.", 
+                    "name": "urun B", 
+                    "product_id": 2
+                }, 
+                {
+                    "product_name": "urun A", 
+                    "image": "img1", 
+                    "description": "Bu urun A'nin aciklamasidir.", 
+                    "product_id": 1
+                }, 
+                1, 
+                {
+                    "product_id": 1
+                }
             ]
         }, 
         {
             "wallet": "100", 
             "user_id": 2, 
             "name": "Ayse Fatma", 
-            "cart": []
+            "cart": [
+                {
+                    "product_id": 1
+                }, 
+                {
+                    "product_id": 1
+                }
+            ]
         }
     ]
 }

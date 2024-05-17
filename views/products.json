@@ -1,16 +1,16 @@
 {
     "products": [
         {
-            "products_id": 1,
+            "product_id": 1,
             "product_name": "urun A",
             "image": "img1",
-            "description": "Bu Ürün A'nın açıklamasıdır."
+            "description": "Bu urun A'nin aciklamasidir."
         },
         {
-            "products_id": 2,
+            "product_id": 2,
             "name": "urun B",
             "image": "img2",
-            "description": "Bu Ürün B'nin açıklamasıdır."
+            "description": "Bu urun B'nin aciklamasidir."
         }
     ]
 }
