@@ -1,5 +1,6 @@
 {
     "products": [
         {
-            "image": "img1", 
-            "description": 
+            "price": "100", 
+            "id": "1", 
+            "name": 
