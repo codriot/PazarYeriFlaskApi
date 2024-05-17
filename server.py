@@ -64,6 +64,15 @@ def add_user():
     except IOError:
         json_data = {"users": []}
 
+    # user_id değerlerini user sözlüklerinden ayırın
+    user_ids = [user.get('user_id', 0) for user in json_data['users']]
+
+    # Maksimum user_id değerini bulun
+    max_user_id = max(user_ids, default=0)
+
+    # Yeni kullanıcıya bir sonraki user_id değerini ata
+    data['user_id'] = max_user_id + 1
+
     # Yeni veriyi JSON dosyasına ekle
     json_data["users"].append(data)
 
@@ -73,7 +82,8 @@ def add_user():
 
     # Başarılı yanıt gönder
     return jsonify({'message': 'Kullanıcı başarıyla eklendi!'}), 200
-
+  
+  
 @app.route('/users', methods=['GET'])
 def get_users():
     try:
