@@ -1,35 +1,14 @@
 {
     "users": [
         {
-            "price": "100", 
-            "id": "1", 
-            "name": "urun Adi"
-        }, 
+            "id": 1,
+            "name": "Ali Veli",
+            "cart": ["Ürün A", "Ürün B"]
+        },
         {
-            "price": "100", 
-            "id": "2", 
-            "name": "urun Adi"
-        }, 
-        {
-            "price": "100", 
-            "id": "3", 
-            "name": "urun Adi"
-        }, 
-        {
-            "price": "100", 
-            "id": "1", 
-            "name": "urun Adi"
-        }, 
-        {
-            "price": "200", 
-            "id": "2", 
-            "name": "urun Adi"
-        }, 
-        {
-            "price": "200", 
-            "deneme": "1", 
-            "id": "2", 
-            "name": "urun Adi"
+            "id": 2,
+            "name": "Ayşe Fatma",
+            "cart": ["Ürün B"]
         }
     ]
 }

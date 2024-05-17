@@ -1,9 +1,16 @@
 {
     "products": [
         {
-            "id": "1",
-            "name": "urun Adi",
-            "price": "100"
+            "id": 1,
+            "name": "urun A",
+            "image": "img1",
+            "description": "Bu Ürün A'nın açıklamasıdır."
+        },
+        {
+            "id": 2,
+            "name": "urun B",
+            "image": "img2",
+            "description": "Bu Ürün B'nin açıklamasıdır."
         }
     ]
 }
