@@ -3,7 +3,12 @@
         {
             "user_id": 1, 
             "name": "Ali Veli", 
-            "cart": [], 
+            "cart": [
+                {
+                    "amount": 2, 
+                    "product_id": 1
+                }
+            ], 
             "credit_card": [
                 {
                     "expiry_date": "12/25", 
