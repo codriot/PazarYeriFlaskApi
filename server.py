@@ -19,6 +19,7 @@ def apply_kr_hello(response):
     # Powered by Flask. 
     response.headers["X-Powered-By"] = os.environ.get('POWERED_BY')
     return response
+  
 @app.route('/products', methods=['POST'])
 def add_product():
     # POST isteğinden gelen JSON verisini al
@@ -26,9 +27,9 @@ def add_product():
 
     # JSON dosyasını oku
     try:
-        with open('views/products.json', 'r') as f:
+        with open('products.json', 'r') as f:
             json_data = json.load(f)
-            if 'products' not in json_data:
+            if 'views/products' not in json_data:
                 json_data = {"products": []}
     except (FileNotFoundError, json.JSONDecodeError):
         json_data = {"products": []}
