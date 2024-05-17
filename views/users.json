@@ -13,8 +13,9 @@
             "cart": []
         }, 
         {
-            "wallet": "150", 
-            "name": "Mehmet Kaya", 
+            "wallet": "4250", 
+            "user_id": 3, 
+            "name": "mehmet ayaci", 
             "cart": []
         }
     ]
