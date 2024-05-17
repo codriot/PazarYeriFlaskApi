@@ -85,39 +85,26 @@ def get_users():
     return jsonify(json_data), 200
   
 
-
 @app.route('/users/cart', methods=['POST'])
 def add_to_cart():
-  # İstekten veriyi al
-  data = request.get_json()
-  user_id = data.get('user_id')
-  product_name = data.get('product_name')
-
-  if not user_id or not product_name:
-      return jsonify({'message': 'Eksik veri: user_id ve product_name gerekli'}), 400
-
-  try:
-      with open('views/users.json', 'r') as f:
-          json_data = json.load(f)
-          # Kullanıcıları daha hızlı arama için sözlüğe dönüştür
-          users_dict = {user['user_id']: user for user in json_data["users"]}
-  except IOError:
-      return jsonify({'message': 'Kullanıcı verisi bulunamadı'}), 404
-
-  # ID'ye göre kullanıcıyı bul (benzersiz user_id varsayıyorum)
-  user = users_dict.get(user_id)
-  if not user:
-      return jsonify({'message': 'Kullanıcı bulunamadı'}), 404
-
-  # Ürünü sepete ekle
-  user["cart"].append(product_name)
-
-  # JSON dosyasını güncelle
-  with open('views/users.json', 'w') as f:
-      json.dump(json_data, f, ensure_ascii=False, indent=4)
-
-  return jsonify({'message': 'Ürün başarıyla sepete eklendi!'}), 200  
-
+    data = request.get_json()
+    user_id = data.get('user_id')
+    product_name = data.get('product_name')
+    if not user_id or not product_name:
+        return jsonify({'message': 'Eksik veri: user_id ve product_name gerekli'}), 400
+    try:
+        with open('views/users.json', 'r') as f:
+            json_data = json.load(f)
+            users_dict = {user['user_id']: user for user in json_data["users"]}
+    except IOError:
+        return jsonify({'message': 'Kullanıcı verisi bulunamadı'}), 404
+    user = users_dict.get(user_id)
+    if not user:
+        return jsonify({'message': 'Kullanıcı bulunamadı'}), 404
+    user["cart"].append(product_name)
+    with open('views/users.json', 'w') as f:
+        json.dump(json_data, f, ensure_ascii=False, indent=4)
+    return jsonify({'message': 'Ürün başarıyla sepete eklendi!'}), 200
   
 @app.route('/')
 def homepage():

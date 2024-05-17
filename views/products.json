@@ -1,13 +1,13 @@
 {
     "products": [
         {
-            "user_id": 1,
+            "products_id": 1,
             "product_name": "urun A",
             "image": "img1",
             "description": "Bu Ürün A'nın açıklamasıdır."
         },
         {
-            "id": 2,
+            "products_id": 2,
             "name": "urun B",
             "image": "img2",
             "description": "Bu Ürün B'nin açıklamasıdır."
