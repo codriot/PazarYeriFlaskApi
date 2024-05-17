@@ -1,3 +1,14 @@
 {
-  "discount": "img"
+  "discount": [
+    {
+      "img":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/bigDiscount.png?v=1715950435777"
+    }
+  ],
+  "bigDiscount":[
+    {
+      "img":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/bigDiscount.png?v=1715950435777"
+    }
+  ]
+  
+  
 }

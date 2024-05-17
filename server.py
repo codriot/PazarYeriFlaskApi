@@ -85,12 +85,15 @@ def get_users():
     return jsonify(json_data), 200
   
 
+  
+
 @app.route('/users/cart', methods=['POST'])
 def add_to_cart():
-    amount = request.get_json().get('amount')
     data = request.get_json()
+    amount = data.get('amount')
     user_id = data.get('user_id')
     product_id = data.get('product_id')
+    
     if not user_id or not product_id:
         return jsonify({'message': 'Eksik veri: user_id ve product_id gerekli'}), 400
 
@@ -107,7 +110,7 @@ def add_to_cart():
     if not product:
         return jsonify({'message': 'Ürün bulunamadı'}), 404
 
-    # Kullanıcıları bul
+    # Kullanıcıları bul ve sepetteki ürünleri kontrol et
     try:
         with open('views/users.json', 'r') as f:
             users_data = json.load(f)
@@ -120,15 +123,22 @@ def add_to_cart():
     if not user:
         return jsonify({'message': 'Kullanıcı bulunamadı'}), 404
 
-    # Ürünü sepete ekle
-    user["cart"].append({"product_id": product["product_id"], "amount": amount})
+    # Sepetteki ürünleri kontrol et
+    for item in user["cart"]:
+        if item["product_id"] == product_id:
+            # Eğer sepette zaten bu ürün varsa, miktarı artır
+            item["amount"] += amount
+            break
+    else:
+        # Eğer ürün sepette yoksa, yeni bir giriş oluştur
+        user["cart"].append({"product_id": product_id, "amount": amount})
 
     # JSON dosyasını güncelle
     with open('views/users.json', 'w') as f:
         json.dump(users_data, f, ensure_ascii=False, indent=4)
 
     return jsonify({'message': 'Ürün başarıyla sepete eklendi!'}), 200
-  
+
   
 @app.route('/users/<int:user_id>', methods=['GET'])
 def get_cart(user_id):

@@ -1,29 +1,20 @@
 {
-    "users": [
+  "users": [
+    {
+      "user_id": 1,
+      "name": "Ali Veli",
+      "wallet": "100",
+      "cart": [
         {
-            "wallet": "100", 
-            "user_id": 1, 
-            "name": "Ali Veli", 
-            "cart": [
-                {
-                    "product": "pro"
-                }
-            ]
-        }, 
-        {
-            "wallet": "100", 
-            "user_id": 2, 
-            "name": "Ayse Fatma", 
-            "cart": [
-                {
-                    "amount": 3, 
-                    "product_id": 1
-                }, 
-                {
-                    "amount": 7, 
-                    "product_id": 1
-                }
-            ]
+          "product": "pro"
         }
-    ]
+      ]
+    },
+    {
+      "user_id": 2,
+      "name": "Ayse Fatma",
+      "wallet": "100",
+      "cart": []
+    }
+  ]
 }
