@@ -87,6 +87,7 @@ def get_users():
 
 @app.route('/users/cart', methods=['POST'])
 def add_to_cart():
+    amount = request.get_json().get('amount')
     data = request.get_json()
     user_id = data.get('user_id')
     product_id = data.get('product_id')
@@ -120,7 +121,7 @@ def add_to_cart():
         return jsonify({'message': 'Kullanıcı bulunamadı'}), 404
 
     # Ürünü sepete ekle
-    user["cart"].append({"product_id": product["product_id"]})
+    user["cart"].append({"product_id": product["product_id"], "amount": amount})
 
     # JSON dosyasını güncelle
     with open('views/users.json', 'w') as f:
@@ -128,6 +129,8 @@ def add_to_cart():
 
     return jsonify({'message': 'Ürün başarıyla sepete eklendi!'}), 200
   
+  
+
   
 @app.route('/')
 def homepage():
