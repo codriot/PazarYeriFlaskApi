@@ -84,7 +84,8 @@ def get_users():
 
     return jsonify(json_data), 200
   
-  
+
+
 @app.route('/users/cart', methods=['POST'])
 def add_to_cart():
   # İstekten veriyi al
@@ -103,7 +104,7 @@ def add_to_cart():
   except IOError:
       return jsonify({'message': 'Kullanıcı verisi bulunamadı'}), 404
 
-  # ID'ye göre kullanıcıyı bul (benzersiz user_id varsayılıyor)
+  # ID'ye göre kullanıcıyı bul (benzersiz user_id varsayıyorum)
   user = users_dict.get(user_id)
   if not user:
       return jsonify({'message': 'Kullanıcı bulunamadı'}), 404
