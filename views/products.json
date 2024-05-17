@@ -43,11 +43,6 @@
             "image": "https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-karolina-grabowska-4465124.png?v=1715950257930", 
             "name": "Yüz Bakım Serumu"
         }, 
-        {
-            "category": "Kategori", 
-            "price": 100, 
-            "name": "Ürün Adı", 
-            "description": "Ürün açıklaması"
-        }
+
     ]
 }

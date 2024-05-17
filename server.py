@@ -46,7 +46,7 @@ def add_product():
 @app.route('/products', methods=['GET'])
 def get_products():
     try:
-        with open('views/products.json', 'r') as f:
+        with codecs.open('views/products.json', 'r', 'utf-8') as f:
             json_data = json.load(f)
     except IOError:
         return jsonify({'message': 'Veri bulunamadı'}), 404
@@ -60,7 +60,7 @@ def add_user():
 
     # JSON dosyasını oku
     try:
-        with open('views/users.json', 'r') as f:
+        with codecs.open('views/users.json', 'r', 'utf-8') as f:
             json_data = json.load(f)
     except IOError:
         json_data = {"users": []}
@@ -69,9 +69,9 @@ def add_user():
     user_ids = [user.get('user_id', 0) for user in json_data['users']]
 
     if user_ids:
-      max_user_id = max(user_ids)
+        max_user_id = max(user_ids)
     else:
-      max_user_id = 0
+        max_user_id = 0
     # Yeni kullanıcıya bir sonraki user_id değerini ata
     data['user_id'] = max_user_id + 1
 
@@ -79,7 +79,7 @@ def add_user():
     json_data["users"].append(data)
 
     # Güncellenmiş JSON verisini dosyaya yaz
-    with open('views/users.json', 'w','utf-8') as f:
+    with codecs.open('views/users.json', 'w', 'utf-8') as f:
         json.dump(json_data, f, ensure_ascii=False, indent=4)
 
     # Başarılı yanıt gönder
@@ -89,7 +89,7 @@ def add_user():
 @app.route('/users', methods=['GET'])
 def get_users():
     try:
-        with open('views/users.json', 'r') as f:
+        with codecs.open('views/users.json', 'r', 'utf-8') as f:
             json_data = json.load(f)
     except IOError:
         return jsonify({'message': 'Veri bulunamadı'}), 404
@@ -100,15 +100,12 @@ def get_users():
 @app.route('/discount', methods=['GET'])
 def get_discount():
     try:
-        with open('views/discount.json', 'r') as f:
+        with codecs.open('views/discount.json', 'r', 'utf-8') as f:
             discount_data = json.load(f)
     except IOError:
         return jsonify({'message': 'Veri bulunamadı'}), 404
 
     return jsonify(discount_data), 200
-
-
-  
 
 @app.route('/users/cart', methods=['POST'])
 def add_to_cart():
@@ -122,7 +119,7 @@ def add_to_cart():
 
     # Ürünleri bul
     try:
-        with open('views/products.json', 'r') as f:
+        with codecs.open('views/products.json', 'r', 'utf-8') as f:
             products_data = json.load(f)
             products_dict = {product['product_id']: product for product in products_data["products"]}
     except IOError:
@@ -135,7 +132,7 @@ def add_to_cart():
 
     # Kullanıcıları bul ve sepetteki ürünleri kontrol et
     try:
-        with open('views/users.json', 'r') as f:
+        with codecs.open('views/users.json', 'r', 'utf-8') as f:
             users_data = json.load(f)
             users_dict = {user['user_id']: user for user in users_data["users"]}
     except IOError:
@@ -157,14 +154,11 @@ def add_to_cart():
         user["cart"].append({"product_id": product_id, "amount": amount})
 
     # JSON dosyasını güncelle
-    with open('views/users.json', 'w') as f:
+    with codecs.open('views/users.json', 'w', 'utf-8') as f:
         json.dump(users_data, f, ensure_ascii=False, indent=4)
 
     return jsonify({'message': 'Ürün başarıyla sepete eklendi!'}), 200
 
-  
-  
-  
 @app.route('/users/credit_card', methods=['POST'])
 def add_credit_card():
     data = request.get_json()
@@ -179,7 +173,7 @@ def add_credit_card():
 
     # Kullanıcıları bul
     try:
-        with open('views/users.json', 'r') as f:
+        with codecs.open('views/users.json', 'r', 'utf-8') as f:
             users_data = json.load(f)
             users_dict = {user['user_id']: user for user in users_data["users"]}
     except IOError:
@@ -202,21 +196,16 @@ def add_credit_card():
     user["credit_card"].append(new_card)
 
     # JSON dosyasını güncelle
-    with open('views/users.json', 'w') as f:
+    with codecs.open('views/users.json', 'w', 'utf-8') as f:
         json.dump(users_data, f, ensure_ascii=False, indent=4)
 
     return jsonify({'message': 'Kredi kartı başarıyla eklendi!'}), 200
-  
- 
 
-
-
-  
 @app.route('/users/<int:user_id>', methods=['GET'])
 def get_cart(user_id):
     # Kullanıcıları bul
     try:
-        with open('views/users.json', 'r', ) as f:
+        with codecs.open('views/users.json', 'r', 'utf-8') as f:
             users_data = json.load(f)
             users_dict = {user['user_id']: user for user in users_data["users"]}
     except IOError:
@@ -230,7 +219,6 @@ def get_cart(user_id):
     # Sepet öğelerini döndür
     return jsonify(user["cart"])
 
-  
 @app.route('/')
 def homepage():
     """Displays the homepage."""
