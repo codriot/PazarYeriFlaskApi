@@ -1,22 +1,17 @@
 {
-    "users": [
-        {
-            "wallet": "100", 
-            "user_id": 1, 
-            "name": "Ali Veli", 
-            "cart": []
-        }, 
-        {
-            "wallet": "100", 
-            "user_id": 2, 
-            "name": "Ayse Fatma", 
-            "cart": []
-        }, 
-        {
-            "wallet": "4250", 
-            "user_id": 3, 
-            "name": "mehmet ayaci", 
-            "cart": []
-        }
-    ]
+  "users": [
+    {
+      "user_id": 1,
+      "name": "Ali Veli",
+      "wallet": "100",
+      "cart": []
+    },
+    {
+      "user_id": 2,
+      "name": "Ayse Fatma",
+      "wallet": "100",
+      "cart": []
+    }
+  ]
 }
+

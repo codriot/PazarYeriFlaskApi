@@ -166,7 +166,7 @@ def add_to_cart():
 def get_cart(user_id):
     # Kullanıcıları bul
     try:
-        with open('views/users.json', 'r') as f:
+        with open('views/users.json', 'r', ) as f:
             users_data = json.load(f)
             users_dict = {user['user_id']: user for user in users_data["users"]}
     except IOError:
