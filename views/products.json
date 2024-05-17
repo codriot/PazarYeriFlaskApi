@@ -2,15 +2,45 @@
     "products": [
         {
             "product_id": 1,
-            "product_name": "urun A",
-            "image": "img1",
+            "product_name": "El kremi -Dynamic 100 ml",
+            "price": 57.99,
+            "image": "https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/globencer-DiJKOYIiNmQ-unsplash.png?v=1715950216178",
             "description": "Bu urun A'nin aciklamasidir."
         },
         {
             "product_id": 2,
-            "name": "urun B",
-            "image": "img2",
+            "name": "Parfüm -Dynamic 100 ml",
+            "price": 57.99,
+            "image": "https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/laura-chouette-20o0Gk7LySE-unsplash.png?v=1715950222542",
             "description": "Bu urun B'nin aciklamasidir."
-        }
+        },
+              {
+            "product_id": 3,
+            "name": "Yüz Bakım Serumu",
+            "price": 368.00,
+            "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-karolina-grabowska-4041392.png?v=1715950234692",
+            "description": "Bu urun C'nin aciklamasidir."
+        },
+        {
+            "product_id": 4,
+            "name": "Yüz Bakım Serumu",
+            "price": 368.0,
+            "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-harper-sunday-3321416.png?v=1715950226663",
+            "description": "Bu urun D'nin aciklamasidir."
+        },
+                    {
+            "product_id": 5,
+            "name": "Yüz Bakım Serumu",
+            "price": 368.00,
+            "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-karolina-grabowska-4041392.png?v=1715950234692",
+            "description": "Bu urun D'nin aciklamasidir."
+        },
+              {
+            "product_id": 6,
+            "name": "Yüz Bakım Serumu",
+            "price": 368.00,
+            "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-karolina-grabowska-4041392.png?v=1715950234692",
+            "description": "Bu urun E'nin aciklamasidir."
+        },
     ]
 }

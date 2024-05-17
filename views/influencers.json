@@ -2,23 +2,23 @@
   "influencers": [
     {
       "name": "Mert DEMİR",
-      "image": "https://example.com/john_doe.jpg"
+      "image": "https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/MertDemir.png?v=1715950213192"
     },
     {
       "name": "Sena GÖK",
-      "image": "https://example.com/jane_smith.jpg"
+      "image": "https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/SenaGök.png?v=1715951032433"
     },
     {
       "name": "Ceren TANK",
-      "image": "https://example.com/michael_johnson.jpg"
+      "image": "https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/CerenTank.png?v=1715951041064"
     },
     {
       "name": "Burak UZUN",
-      "image": "https://example.com/emily_brown.jpg"
+      "image": "https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/BurakUzun.png?v=1715951034909"
     },
     {
       "name": "Sıla ÇERKEZ",
-      "image": "https://example.com/david_wilson.jpg"
+      "image": "https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/SılaÇerkez.png?v=1715950210916"
     }
   ]
 }
