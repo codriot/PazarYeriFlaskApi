@@ -4,9 +4,13 @@
       "user_id": 1,
       "name": "Ali Veli",
       "wallet": "100",
+      "credit_card":[],
+      "address":"izmir",
       "cart": []
     },
     {
+      "credit_card":[],
+      "address":"izmir",
       "user_id": 2,
       "name": "Ayse Fatma",
       "wallet": "100",
