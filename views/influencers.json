@@ -1,0 +1,24 @@
+{
+  "influencers": [
+    {
+      "name": "Mert DEMİR",
+      "image": "https://example.com/john_doe.jpg"
+    },
+    {
+      "name": "Sena GÖK",
+      "image": "https://example.com/jane_smith.jpg"
+    },
+    {
+      "name": "Ceren TANK",
+      "image": "https://example.com/michael_johnson.jpg"
+    },
+    {
+      "name": "Burak UZUN",
+      "image": "https://example.com/emily_brown.jpg"
+    },
+    {
+      "name": "Sıla ÇERKEZ",
+      "image": "https://example.com/david_wilson.jpg"
+    }
+  ]
+}

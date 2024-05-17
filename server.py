@@ -84,6 +84,17 @@ def get_users():
 
     return jsonify(json_data), 200
   
+  
+@app.route('/discount', methods=['GET'])
+def get_discount():
+    try:
+        with open('views/discount.json', 'r') as f:
+            discount_data = json.load(f)
+    except IOError:
+        return jsonify({'message': 'Veri bulunamadı'}), 404
+
+    return jsonify(discount_data), 200
+
 
   
 
