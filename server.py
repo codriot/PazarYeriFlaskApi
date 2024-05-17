@@ -4,6 +4,7 @@
 import os
 from flask import Flask, request, render_template, jsonify
 import json
+import codecs
 
 app = Flask(__name__, static_folder='public', template_folder='views')
 
@@ -27,7 +28,7 @@ def add_product():
 
     # JSON dosyasını oku
     try:
-        with open('views/products.json', 'r') as f:
+        with codecs.open('views/products.json', 'r', 'utf-8') as f:
             json_data = json.load(f)
     except (IOError, json.JSONDecodeError):
         json_data = {"products": []}
@@ -36,7 +37,7 @@ def add_product():
     json_data["products"].append(data)
 
     # Güncellenmiş JSON verisini dosyaya yaz
-    with open('views/products.json', 'w') as f:
+    with codecs.open('views/products.json', 'w', 'utf-8') as f:
         json.dump(json_data, f, ensure_ascii=False, indent=4)
 
     # Başarılı yanıt gönder
