@@ -171,6 +171,7 @@ def add_credit_card():
     card_number = data.get('card_number')
     expiry_date = data.get('expiry_date')
     card_holder_name = data.get('card_holder_name')
+    cvv = data.get('cvv')
     
     if not user_id or not card_number or not expiry_date or not card_holder_name:
         return jsonify({'message': 'Eksik veri: user_id, card_number, expiry_date ve card_holder_name gerekli'}), 400
@@ -192,7 +193,8 @@ def add_credit_card():
     new_card = {
         "card_number": card_number,
         "expiry_date": expiry_date,
-        "card_holder_name": card_holder_name
+        "card_holder_name": card_holder_name,
+        "cvv": cvv
     }
     if "credit_card" not in user:
         user["credit_card"] = []

@@ -14,6 +14,18 @@
                     "expiry_date": "12/25", 
                     "card_number": "1234-5678-9012-3456", 
                     "card_holder_name": "Ali Veli"
+                }, 
+                {
+                    "cvv": "248", 
+                    "expiry_date": "12/15", 
+                    "card_number": "1234-5678-9012-3456", 
+                    "card_holder_name": "Ali Veli"
+                }, 
+                {
+                    "cvv": "248", 
+                    "expiry_date": "12/15", 
+                    "card_number": "1234-5678-9012-3456", 
+                    "card_holder_name": "Ali Veli"
                 }
             ], 
             "wallet": "100", 
@@ -23,9 +35,30 @@
             "user_id": 2, 
             "name": "Ayse Fatma", 
             "cart": [], 
-            "credit_card": [], 
+            "credit_card": [
+                {
+                    "cvv": "248", 
+                    "expiry_date": "12/15", 
+                    "card_number": "1234-5678-9012-3456", 
+                    "card_holder_name": "Ali Veli"
+                }
+            ], 
             "wallet": "100", 
             "address": "izmir"
+        }, 
+        {
+            "cvv": "248", 
+            "expiry_date": "12/25", 
+            "user_id": 3, 
+            "card_number": "1234-5678-9012-3456", 
+            "card_holder_name": "Ali Veli"
+        }, 
+        {
+            "cvv": "248", 
+            "expiry_date": "12/15", 
+            "user_id": 4, 
+            "card_number": "1234-5678-9012-3456", 
+            "card_holder_name": "Ali Veli"
         }
     ]
 }
