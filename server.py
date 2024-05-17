@@ -162,6 +162,53 @@ def add_to_cart():
     return jsonify({'message': 'Ürün başarıyla sepete eklendi!'}), 200
 
   
+  
+  
+@app.route('/users/credit_card', methods=['POST'])
+def add_credit_card():
+    data = request.get_json()
+    user_id = data.get('user_id')
+    card_number = data.get('card_number')
+    expiry_date = data.get('expiry_date')
+    card_holder_name = data.get('card_holder_name')
+    
+    if not user_id or not card_number or not expiry_date or not card_holder_name:
+        return jsonify({'message': 'Eksik veri: user_id, card_number, expiry_date ve card_holder_name gerekli'}), 400
+
+    # Kullanıcıları bul
+    try:
+        with open('views/users.json', 'r') as f:
+            users_data = json.load(f)
+            users_dict = {user['user_id']: user for user in users_data["users"]}
+    except IOError:
+        return jsonify({'message': 'Kullanıcı verisi bulunamadı'}), 404
+
+    # ID'ye göre kullanıcıyı bul
+    user = users_dict.get(user_id)
+    if not user:
+        return jsonify({'message': 'Kullanıcı bulunamadı'}), 404
+
+    # Yeni kredi kartı bilgilerini ekle
+    new_card = {
+        "card_number": card_number,
+        "expiry_date": expiry_date,
+        "card_holder_name": card_holder_name
+    }
+    if "credit_card" not in user:
+        user["credit_card"] = []
+    user["credit_card"].append(new_card)
+
+    # JSON dosyasını güncelle
+    with open('views/users.json', 'w') as f:
+        json.dump(users_data, f, ensure_ascii=False, indent=4)
+
+    return jsonify({'message': 'Kredi kartı başarıyla eklendi!'}), 200
+  
+ 
+
+
+
+  
 @app.route('/users/<int:user_id>', methods=['GET'])
 def get_cart(user_id):
     # Kullanıcıları bul

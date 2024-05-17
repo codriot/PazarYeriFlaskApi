@@ -1,21 +1,26 @@
 {
-  "users": [
-    {
-      "user_id": 1,
-      "name": "Ali Veli",
-      "wallet": "100",
-      "credit_card":[],
-      "address":"izmir",
-      "cart": []
-    },
-    {
-      "credit_card":[],
-      "address":"izmir",
-      "user_id": 2,
-      "name": "Ayse Fatma",
-      "wallet": "100",
-      "cart": []
-    }
-  ]
+    "users": [
+        {
+            "user_id": 1, 
+            "name": "Ali Veli", 
+            "cart": [], 
+            "credit_card": [
+                {
+                    "expiry_date": "12/25", 
+                    "card_number": "1234-5678-9012-3456", 
+                    "card_holder_name": "Ali Veli"
+                }
+            ], 
+            "wallet": "100", 
+            "address": "izmir"
+        }, 
+        {
+            "user_id": 2, 
+            "name": "Ayse Fatma", 
+            "cart": [], 
+            "credit_card": [], 
+            "wallet": "100", 
+            "address": "izmir"
+        }
+    ]
 }
-
