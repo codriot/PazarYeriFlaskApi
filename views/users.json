@@ -18,6 +18,10 @@
                 {
                     "amount": 3, 
                     "product_id": 1
+                }, 
+                {
+                    "amount": 7, 
+                    "product_id": 1
                 }
             ]
         }
