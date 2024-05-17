@@ -24,23 +24,24 @@
         {
             "product_id": 4,
             "name": "Yüz Bakım Serumu",
+            "code":"PZ5354686",
             "price": 368.0,
             "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-harper-sunday-3321416.png?v=1715950226663",
-            "description": "Bu urun D'nin aciklamasidir."
+            "description": "Yüzünüze parlaklık ve nem verir. Sivilce akne oluşumunu önler.  Üstelik içindeki C vitamini sayesinde vücudunuzun cilt bariyerini güçlendirir."
         },
                     {
             "product_id": 5,
             "name": "Yüz Bakım Serumu",
             "price": 368.00,
-            "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-karolina-grabowska-4041392.png?v=1715950234692",
+            "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-monstera-6621339.png?v=1715950240513",
             "description": "Bu urun D'nin aciklamasidir."
         },
               {
             "product_id": 6,
             "name": "Yüz Bakım Serumu",
             "price": 368.00,
-            "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-karolina-grabowska-4041392.png?v=1715950234692",
+            "image":"https://cdn.glitch.global/2a677113-2079-4646-b555-4ce710ee7b93/pexels-karolina-grabowska-4465124.png?v=1715950257930",
             "description": "Bu urun E'nin aciklamasidir."
-        },
+        }
     ]
 }
