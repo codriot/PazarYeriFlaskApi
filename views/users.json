@@ -1,5 +1,19 @@
 {
     "users": [
         {
-            "id": 1, 
-            "cart": 
+            "id": "1",
+            "name": "urun Adi",
+            "price": "100"
+        },
+        {
+            "id": "2",
+            "name": "urun Adi",
+            "price": "100"
+        },
+        {
+            "id": "3",
+            "name": "urun Adi",
+            "price": "100"
+        }
+    ]
+}

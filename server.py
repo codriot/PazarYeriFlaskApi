@@ -86,35 +86,6 @@ def get_users():
 
     return jsonify(json_data), 200
   
-  @app.route('/users/cart', methods=['POST'])
-def add_to_cart():
-    # POST isteğinden gelen JSON verisini al
-    data = request.get_json()
-    user_id = data.get('user_id')
-    product_name = data.get('product_name')
-
-    if not user_id or not product_name:
-        return jsonify({'message': 'Eksik veri: user_id ve product_name gerekli'}), 400
-
-    try:
-        with open('views/users.json', 'r') as f:
-            json_data = json.load(f)
-    except IOError:
-        return jsonify({'message': 'Kullanıcı verisi bulunamadı'}), 404
-
-    for user in json_data["users"]:
-        if user["id"] == user_id:
-            user["cart"].append(product_name)
-            break
-    else:
-        return jsonify({'message': 'Kullanıcı bulunamadı'}), 404
-
-    # Güncellenmiş JSON verisini dosyaya yaz
-    with open('views/users.json', 'w') as f:
-        json.dump(json_data, f, ensure_ascii=False, indent=4)
-
-    return jsonify({'message': 'Ürün başarıyla sepete eklendi!'}), 200
-
 @app.route('/')
 def homepage():
     """Displays the homepage."""
