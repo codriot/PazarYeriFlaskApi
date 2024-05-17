@@ -4,11 +4,7 @@
       "user_id": 1,
       "name": "Ali Veli",
       "wallet": "100",
-      "cart": [
-        {
-          "product": "pro"
-        }
-      ]
+      "cart": []
     },
     {
       "user_id": 2,
