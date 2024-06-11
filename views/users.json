@@ -2,39 +2,198 @@
     "users": [
         {
             "user_id": 1, 
-            "name": "Ali Veli", 
-            "cart": [
-                {
-                    "amount": 2, 
-                    "product_id": 1
-                }
-            ], 
-            "credit_card": [
-                {
-                    "cvv": "248", 
-                    "expiry_date": "12/15", 
-                    "card_number": "1234-5678-9012-3456", 
-                    "card_holder_name": "Ali Veli"
-                }
-            ], 
-            "wallet": 100, 
-            "address": "İzmir"
+            "firstName": "Mustafa", 
+            "gender": "Erkek", 
+            "lastName": "Al", 
+            "birthDate": "2002.02.14", 
+            "credit_card": [], 
+            "wallet": 0, 
+            "emailAddress": "mustafa@mail.com", 
+            "cart": [], 
+            "hobbies": "Koşu yapma", 
+            "favourites": [], 
+            "address": [], 
+            "educationStatus": "Lise"
         }, 
         {
             "user_id": 2, 
-            "name": "Ayse Fatma", 
-            "cart": [], 
-            "credit_card": [
+            "firstName": "mustafa", 
+            "gender": "Kadın", 
+            "hobbies": "Yüzme", 
+            "birthDate": "2002.02.14", 
+            "credit_card": [], 
+            "wallet": 0, 
+            "emailAddress": "mustafa@gmail.com", 
+            "cart": [
                 {
-                    "cvv": "248", 
-                    "expiry_date": "12/15", 
-                    "card_number": "1234-5678-9012-3456", 
-                    "card_holder_name": "Ali Veli"
+                    "amount": 2, 
+                    "product_id": 4
+                }, 
+                {
+                    "amount": 1, 
+                    "product_id": 3
+                }, 
+                {
+                    "amount": 1, 
+                    "product_id": 2
                 }
             ], 
-            "wallet": 100, 
-            "address": "Manisa"
+            "lastName": "Al", 
+            "favourites": [
+                {
+                    "product_id": 4
+                }, 
+                {
+                    "product_id": 1
+                }, 
+                {
+                    "product_id": 3
+                }
+            ], 
+            "pastOrders": [
+                {
+                    "amount": 1, 
+                    "product_id": 2
+                }, 
+                {
+                    "amount": 1, 
+                    "product_id": 4
+                }, 
+                {
+                    "amount": 1, 
+                    "product_id": 1
+                }, 
+                {
+                    "amount": 1, 
+                    "product_id": 3
+                }
+            ], 
+            "address": [], 
+            "educationStatus": "Lise"
+        }, 
+        {
+            "user_id": 3, 
+            "firstName": "tert", 
+            "gender": "Erkek", 
+            "lastName": "ertert", 
+            "birthDate": "1999.07.19", 
+            "credit_card": [
+                {
+                    "cvv": "111", 
+                    "expiry_date": "19/25", 
+                    "card_number": "3151  3513  5135", 
+                    "card_holder_name": "sdfsdfsdf"
+                }, 
+                {
+                    "cvv": "00", 
+                    "expiry_date": "11/11", 
+                    "card_number": "5356", 
+                    "card_holder_name": "sdsd"
+                }, 
+                {
+                    "cvv": "122", 
+                    "expiry_date": "19/28", 
+                    "card_number": "5356  5555  5555  5555", 
+                    "card_holder_name": "ssss"
+                }
+            ], 
+            "wallet": 0, 
+            "emailAddress": "ertertertert@gmail.com", 
+            "cart": [
+                {
+                    "amount": 1, 
+                    "product_id": 1
+                }
+            ], 
+            "hobbies": "Yüzme", 
+            "favourites": [
+                {
+                    "product_id": 1
+                }
+            ], 
+            "pastOrders": [
+                {
+                    "amount": 6, 
+                    "product_id": 1
+                }
+            ], 
+            "address": [
+                {
+                    "address_name": "Adres Başlığı", 
+                    "address": "Adres"
+                }
+            ], 
+            "educationStatus": "Universite"
+        }, 
+        {
+            "user_id": 4, 
+            "firstName": "Mustafa", 
+            "gender": "Erkek", 
+            "lastName": "Al", 
+            "birthDate": "2002.02.14", 
+            "credit_card": [], 
+            "wallet": 0, 
+            "emailAddress": "mustafasamet3432002@gmail.com", 
+            "cart": [
+                {
+                    "amount": 1, 
+                    "product_id": 2
+                }
+            ], 
+            "hobbies": "Seyahat etme", 
+            "favourites": [
+                {
+                    "product_id": 4
+                }
+            ], 
+            "pastOrders": [
+                {
+                    "amount": 1, 
+                    "product_id": 1
+                }, 
+                {
+                    "amount": 9, 
+                    "product_id": 4
+                }
+            ], 
+            "address": [], 
+            "educationStatus": "Universite"
+        }, 
+        {
+            "user_id": 5, 
+            "firstName": "uafj", 
+            "gender": "Erkek", 
+            "lastName": " lan", 
+            "birthDate": "2002.02.12", 
+            "credit_card": [
+                {
+                    "cvv": "536", 
+                    "expiry_date": "02/12", 
+                    "card_number": "4455  4555  5555  5596", 
+                    "card_holder_name": "terzi"
+                }
+            ], 
+            "wallet": 0, 
+            "emailAddress": "mustafasamet3432002@gmail.com", 
+            "cart": [], 
+            "hobbies": "Yüzme", 
+            "favourites": [
+                {
+                    "product_id": 3
+                }
+            ], 
+            "pastOrders": [
+                {
+                    "amount": 3, 
+                    "product_id": 4
+                }, 
+                {
+                    "amount": 6, 
+                    "product_id": 3
+                }
+            ], 
+            "address": [], 
+            "educationStatus": "Lise"
         }
-
     ]
 }
